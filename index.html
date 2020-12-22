@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PORTFOLIO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="porfolioSec">
+        <ul>
+            <li class="list active" data-filter="todo">Todo</li>
+            <li class="list" data-filter="celular">Celular</li>
+            <li class="list" data-filter="camara">Camara</li>
+            <li class="list" data-filter="reloj">Reloj</li>
+            <li class="list" data-filter="zapato">Zapatos</li>
+            <li class="list" data-filter="auriculares">Auriculares</li>
+        </ul>
+
+        <div class="productos">
+            <div class="itemBox celular"><img src="img/mobile1.jpg" alt=""></div>   
+            <div class="itemBox camara"><img src="img/camera1.jpg" alt=""></div>           
+            <div class="itemBox reloj"><img src="img/watch1.jpg" alt=""></div>
+            <div class="itemBox zapato"><img src="img/shoe1.jpg" alt=""></div>
+            <div class="itemBox auriculares"><img src="img/headphone1.jpg" alt=""></div>
+            <div class="itemBox celular"><img src="img/mobile2.jpg" alt=""></div>
+            <div class="itemBox camara"><img src="img/camera2.jpg" alt=""></div>
+            <div class="itemBox reloj"><img src="img/watch2.jpg" alt=""></div>
+            <div class="itemBox zapato"><img src="img/shoe2.jpg" alt=""></div>
+            <div class="itemBox auriculares"><img src="img/headphone2.jpg" alt=""></div>
+            <div class="itemBox celular"><img src="img/mobile3.jpg" alt=""></div>
+            <div class="itemBox camara"><img src="img/camera3.jpg" alt=""></div>
+            <div class="itemBox reloj"><img src="img/watch3.jpg" alt=""></div>
+            <div class="itemBox zapato"><img src="img/shoe3.jpg" alt=""></div>
+            <div class="itemBox auriculares"><img src="img/headphone3.jpg" alt=""></div>
+            <div class="itemBox celular"><img src="img/mobile4.jpg" alt=""></div>
+            <div class="itemBox reloj"><img src="img/watch4.jpg" alt=""></div>
+            <div class="itemBox zapato"><img src="img/shoe4.jpg" alt=""></div>
+            <div class="itemBox auriculares"><img src="img/headphone4.jpg" alt=""></div>
+            <div class="itemBox celular"><img src="img/mobile5.jpg" alt=""></div>
+        </div>
+    </section>
+
+    <!-- QUERY SELECTOR -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- JAVASCRIPT SELECTOR -->
+    <script type="text/javascript">
+    //FILTRO DE IMAGENES
+
+        $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if  (value == 'todo'){
+                    $('.itemBox').show('1000');
+                }
+                else{
+                    $('.itemBox').not('.'+value).hide('1000')
+                    $('.itemBox').filter('.'+value).show('1000')
+                }
+            })
+            //BOTON ACTIVO
+
+            $('.list').click(function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.porfolioSec{
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 100%;
+}
+
+.porfolioSec ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.porfolioSec ul li{
+    list-style: none;
+    background: #eeeeee;
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.porfolioSec ul li.active{
+    background: #03a9f4;
+    color: #ffffff;
+}
+
+.porfolioSec .productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+        /*Tapa lo que sobra*/
+    overflow: hidden;
+}
+
+.porfolioSec .productos .itemBox{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+       /*Tapa lo que sobra*/
+    overflow: hidden;
+}
+
+.porfolioSec .productos .itemBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.4s;
+}
+/* Rotacion de imagen en hover */
+.porfolioSec .productos .itemBox:hover img{
+    transform: scale(1.2) rotate(10deg);
+    opacity: 0.5;
+}
+
+@media (max-width: 750px){
+    .porfolioSec .productos{
+        align-items: center;
+        justify-content: center;
+    }
+    .porfolioSec .productos .itemBox{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 625px){
+    .porfolioSec .productos .itemBox{
+        width: 200px;
+        height: 200px;
+    }
+}
