@@ -1,2 +1,3 @@
-# responsive_filter_gallery_1
-Responsive Filter Gallery
+# Responsive Filter Gallery in HTML CSS and JavaScript
+
+Responsive Filter Gallery for products display with elements filter in JavaScript
